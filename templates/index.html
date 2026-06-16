@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow Solar AI Assistant</title>
+</head>
+<body>
+
+<h1>☀️ Arrow Solar AI Assistant</h1>
+
+<form action="/ask" method="POST">
+
+    <input
+        type="text"
+        name="question"
+        placeholder="Ask about solar..."
+        style="width:500px;"
+        required
+    >
+
+    <button type="submit">Ask</button>
+
+</form>
+
+{% if question %}
+<hr>
+<h3>Question</h3>
+<p>{{ question }}</p>
+{% endif %}
+
+{% if answer %}
+<hr>
+<h3>Answer</h3>
+<p>{{ answer }}</p>
+{% endif %}
+
+</body>
+</html>
