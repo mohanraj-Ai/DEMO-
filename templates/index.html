@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Arrow Solar AI Assistant - CI/CD Test</title>
+</head>
+<body style="font-family: Arial; margin:40px;">
+
+<h1>☀️ Arrow Solar AI Assistant</h1>
+
+<h3 style="color:green;">
+✅ CI/CD Deployment Test - Version 2
+</h3>
+
+<p>
+Build Date: 17-Jun-2026
+</p>
+
+<form action="/ask" method="POST">
+
+```
+<input
+    type="text"
+    name="question"
+    placeholder="Ask about solar..."
+    style="width:500px;height:35px;"
+    required
+>
+
+<button type="submit">
+    Ask AI
+</button>
+```
+
+</form>
+
+{% if question %}
+
+<hr>
+<h3>Your Question</h3>
+<p>{{ question }}</p>
+{% endif %}
+
+{% if answer %}
+
+<hr>
+<h3>AI Response</h3>
+<p>{{ answer }}</p>
+{% endif %}
+
+<hr>
+
+<p style="color:blue;">
+🚀 Running through GitHub → Cloud Build → Cloud Run
+</p>
+
+</body>
+</html>
